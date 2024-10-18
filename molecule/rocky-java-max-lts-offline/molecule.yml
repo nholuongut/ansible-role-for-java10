@@ -1,0 +1,27 @@
+---
+dependency:
+  name: galaxy
+
+driver:
+  name: docker
+
+role_name_check: 2
+
+lint: |
+  set -e
+  yamllint .
+  ansible-lint
+  flake8
+
+platforms:
+  - name: ansible-role-java-centos-max-java-max-lts
+    image: rockylinux/rockylinux:8
+
+provisioner:
+  name: ansible
+  playbooks:
+    converge: ../java-max-lts-offline/converge.yml
+
+verifier:
+  name: testinfra
+  directory: ../java-max-lts/tests

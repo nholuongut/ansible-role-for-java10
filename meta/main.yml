@@ -1,0 +1,37 @@
+---
+galaxy_info:
+  author: John Freeman
+  description: Role for installing the Java JDK.
+  company: GantSign Ltd.
+  license: MIT
+  min_ansible_version: '2.12'
+  platforms:
+    - name: EL
+      versions:
+        - '8'
+    - name: Fedora
+      versions:
+        - '35'
+    - name: opensuse
+      versions:
+        - '15.4'
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+        - jammy
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+        - bullseye
+  galaxy_tags:
+    - java
+    - jdk
+    - openjdk
+    - adoptium
+    - temurin
+    - development
+    - web
+    - system
+dependencies: []
